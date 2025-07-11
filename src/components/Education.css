@@ -62,7 +62,7 @@
   white-space: nowrap;
   display: inline-block;
   background: var(--primary-purple);
-  color: var(--text-white);
+  color: #fff;
   padding: 5px 12px;
   border-radius: 5px;
   font-size: 0.9rem;

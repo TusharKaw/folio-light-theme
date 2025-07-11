@@ -6,7 +6,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-  const isBlogsPage = location.pathname === '/blogs';
   const isProjectPage = location.pathname === '/all-projects'
 
   const toggleMenu = () => {
@@ -36,13 +35,13 @@ const Navbar = () => {
                 <li><a href="#experience" onClick={closeMenu}>Experience</a></li>
                 <li><a href="#education" onClick={closeMenu}>Education</a></li>
                 <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-                <li><a href="/blogs" onClick={closeMenu}>Blogs</a></li>
+                <li><a href="#faqs" onClick={closeMenu}>FAQs</a></li>
               </>
-            ) : (isProjectPage || isBlogsPage) ? (
+            ) : isProjectPage ? (
               <>
                 <li><Link to="/" onClick={closeMenu}>Home</Link></li>
                 <li><a href="/all-projects"><text>Projects</text></a></li>
-                <li><a href="/blogs"><text>Blogs</text></a></li>
+                <li><a href="/#faqs"><text>FAQs</text></a></li>
               </>
             ) : (
               <li><Link to="/" onClick={closeMenu}>Home</Link></li>
@@ -52,7 +51,7 @@ const Navbar = () => {
         
         <div className="navbar-contact">
           {isHomePage ? (
-            <a href="#contact" className="btn" onClick={closeMenu}><text style={{color:"#000000"}}>Contact</text></a>
+            <a href="#contact" className="btn" onClick={closeMenu}><text style={{color:"#fff"}}>Contact</text></a>
           ) : (
             <Link to="/#contact" className="btn" onClick={closeMenu}><text style={{color:"#000000"}}>Contact</text></Link>
           )}

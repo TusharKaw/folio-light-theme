@@ -1,11 +1,11 @@
 :root {
-  --background-dark: #0e0322;
-  --background-darker: #070117;
+  --background-dark: #ffffff;
+  --background-darker: #ffffff;
   --primary-purple: #8a2be2;
   --light-purple: #9d4edd;
-  --text-white: #ffffff;
-  --text-gray: #e6e6e6;
-  --text-light-gray: #cccccc;
+  --text-white: #000000;
+  --text-gray: #313131;
+  --text-light-gray: #747474;
   --section-padding: 20px 0;
 }
 
@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   padding: 12px 30px;
   background: var(--primary-purple);
-  color: var(--text-white);
+  color: #fff;
   border: none;
   border-radius: 5px;
   font-weight: 600;
@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-  background-color: rgba(14, 3, 34, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(138, 43, 226);
   border-radius: 10px;

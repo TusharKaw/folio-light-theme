@@ -1,6 +1,6 @@
 .services {
   padding: var(--section-padding);
-  background: linear-gradient(to bottom, var(--background-dark), rgba(7, 1, 23, 0.9));
+  background: linear-gradient(to bottom, var(--background-dark), rgba(255, 255, 255, 0.1));
   text-align: center;
 }
 
@@ -37,7 +37,7 @@
 
 .service-card:hover::before {
   width: 100%;
-  background: rgba(138, 43, 226, 0.1);
+  background: rgb(255, 255, 255, 0.1);
 }
 
 .service-icon {

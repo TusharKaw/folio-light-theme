@@ -282,8 +282,8 @@ const Projects = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>See More Projects</span>
-              <i className="fas fa-arrow-right"></i>
+              <span style={{color:'white'}}>See More Projects</span>
+              <i style={{color:'white'}}className="fas fa-arrow-right"></i>
             </motion.a>
           </div>
         </AnimatedSection>

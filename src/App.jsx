@@ -10,9 +10,8 @@ import Experience from './components/Experience'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+import Faqs from './components/Faqs'
 import Footer from './components/Footer'
-import Blog from './components/Blog'
-import BlogPost from './components/BlogPost'
 import AllProjects from './components/AllProjects'
 import CustomCursor from './components/CustomCursor'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -70,6 +69,7 @@ function App() {
       <Education />
       <Skills />
       <Contact />
+      <Faqs />
     </>
   );
 
@@ -93,34 +93,7 @@ function App() {
               </motion.div>
             } 
           />
-          <Route 
-            path="/blogs" 
-            element={
-              <motion.div
-                className="app"
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                variants={pageVariants}
-              >
-                <Blog />
-              </motion.div>
-            } 
-          />
-          <Route 
-            path="/blog/:slug" 
-            element={
-              <motion.div
-                className="app"
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                variants={pageVariants}
-              >
-                <BlogPost />
-              </motion.div>
-            } 
-          />
+
           <Route 
             path="/all-projects" 
             element={

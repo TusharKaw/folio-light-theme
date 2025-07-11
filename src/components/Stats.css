@@ -1,6 +1,6 @@
 .stats {
   padding: 30px 0;
-  background-color: #230b39;
+  background-color: rgb(49, 49, 49, 0.1);
   backdrop-filter: blur(10px);
   border-top: 5px solid rgba(138, 43, 226, 0.2);
   border-bottom: 5px solid rgba(138, 43, 226, 0.2);
