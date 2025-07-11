@@ -1,0 +1,100 @@
+.education {
+  padding: var(--section-padding);
+  background: var(--background-dark);
+  text-align: center;
+}
+
+.education-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.education-column {
+  flex: 1;
+  max-width: 550px;
+}
+
+.education-subtitle {
+  font-size: 1.8rem;
+  color: var(--text-white);
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.education-subtitle::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-purple);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.education-item {
+  text-align: left;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.education-year {
+  white-space: nowrap;
+  display: inline-block;
+  background: var(--primary-purple);
+  color: var(--text-white);
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.education-degree {
+  text-align: end;
+  font-size: 1.3rem;
+  color: var(--text-white);
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.education-institution {
+  font-size: 1.1rem;
+  color: var(--primary-purple);
+  margin-bottom: 5px;
+}
+
+.education-location {
+  font-size: 0.9rem;
+  color: var(--text-light-gray);
+}
+
+@media (max-width: 992px) {
+  .education-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .education-column {
+    width: 100%;
+  }
+} 

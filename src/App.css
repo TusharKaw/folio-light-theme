@@ -1,0 +1,238 @@
+:root {
+  --background-dark: #0e0322;
+  --background-darker: #070117;
+  --primary-purple: #8a2be2;
+  --light-purple: #9d4edd;
+  --text-white: #ffffff;
+  --text-gray: #e6e6e6;
+  --text-light-gray: #cccccc;
+  --section-padding: 20px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-white);
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor when using custom cursor */
+}
+
+.app {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container {
+  width: 100%;
+  padding: var(--section-padding);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--text-white);
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title span {
+  color: var(--primary-purple);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 70px;
+  height: 3px;
+  background: var(--primary-purple);
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--primary-purple);
+  color: var(--text-white);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: none; /* Use custom cursor */
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: translateX(100%);
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+}
+
+.btn:hover::after {
+  transform: scaleX(1);
+}
+
+.card {
+  background-color: rgba(14, 3, 34, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(138, 43, 226);
+  border-radius: 10px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  cursor: none; /* Use custom cursor */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
+  border: 1px solid rgba(138, 43, 226, 0.4);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Loader styles */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-darker);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.loader-icon {
+  font-size: 4rem;
+  color: var(--primary-purple);
+  animation: pulse 1.5s infinite alternate;
+}
+
+.loader h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.loader h2 span {
+  color: var(--primary-purple);
+}
+
+.loader-bar {
+  width: 200px;
+  height: 6px;
+  background-color: rgba(138, 43, 226, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.loader-progress {
+  height: 100%;
+  background: linear-gradient(to right, var(--primary-purple), var(--light-purple));
+  border-radius: 10px;
+  animation: loading 1.5s linear infinite;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* More general game-like styling */
+::selection {
+  background: var(--primary-purple);
+  color: var(--text-white);
+}
+
+a, button, .card {
+  cursor: none; /* Use custom cursor */
+}

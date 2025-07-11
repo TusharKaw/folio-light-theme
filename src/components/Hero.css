@@ -1,0 +1,248 @@
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(7, 1, 23, 0.8), var(--background-dark));
+  padding: 20px 0 80px 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 650px;
+  z-index: 1;
+}
+
+.hero-content h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--text-gray);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content h1 span {
+  color: var(--primary-purple);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light-gray);
+  margin-bottom: 2rem;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary-purple);
+}
+
+.btn-outline:hover {
+  background: var(--primary-purple);
+}
+
+.hero-social {
+  display: flex;
+  gap: 25px;
+}
+
+.hero-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(138, 43, 226, 0.2);
+  color: var(--text-white);
+  transition: all 0.3s ease;
+}
+
+.hero-social a:hover {
+  background-color: var(--primary-purple);
+  transform: translateY(-3px);
+}
+
+.hero-social a i {
+  font-size: 1.2rem;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 350px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid rgba(138, 43, 226, 0.3);
+  /* background: linear-gradient(145deg, rgba(14, 3, 34, 0.6), rgba(7, 1, 23, 0.9)); */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+    .hero-image-wrapper:hover {
+        animation: zoomGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes zoomGlow {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 5px rgba(255,255,255,0.2);
+        }
+
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255,255,255,0.8);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 5px rgba(255,255,255,0.2);
+        }
+    }
+
+
+
+    .profile-image-placeholder {
+        width: 100%;
+        height: 100%;
+        /* background: linear-gradient(45deg, rgba(138, 43, 226, 0.2), rgba(157, 78, 221, 0.2)); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-icon {
+        font-size: 6rem;
+        color: var(--primary-purple);
+        /* opacity: 0.7; */
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-image: url('./../assets/nitin.jpg');
+  background-size: cover; /* ensure image fills the area */
+  background-position: center;
+
+  /* background: linear-gradient(45deg, var(--primary-purple), transparent, var(--primary-purple)); */
+  z-index: -1;
+  /* animation: borderGlow 8s linear infinite; */
+  border-radius: 30px;
+  /* opacity: 0.4; */
+}
+
+@keyframes borderGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 60%);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.btn:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin-bottom: 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-social {
+    justify-content: center;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-image-wrapper {
+    width: 280px;
+    height: 360px;
+  }
+} 

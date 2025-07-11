@@ -1,0 +1,122 @@
+.footer {
+  background: var(--background-darker);
+  padding-top: 80px;
+  border-top: 1px solid rgba(138, 43, 226);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-logo h2 {
+  font-size: 1.8rem;
+  color: var(--text-white);
+  margin-bottom: 15px;
+}
+
+.footer-logo span {
+  color: var(--primary-purple);
+}
+
+.footer-logo p {
+  color: var(--text-light-gray);
+  font-size: 1rem;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 1.2rem;
+  color: var(--text-white);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-links h3::after,
+.footer-contact h3::after,
+.footer-social h3::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: var(--primary-purple);
+  left: 0;
+  bottom: -10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+  color: var(--text-light-gray);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-links ul li a:hover {
+  color: var(--primary-purple);
+  padding-left: 5px;
+}
+
+.footer-contact p {
+  color: var(--text-light-gray);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-contact p i {
+  color: var(--primary-purple);
+}
+
+.footer-social .social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social .social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(138, 43, 226, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  transition: all 0.3s ease;
+}
+
+.footer-social .social-links a:hover {
+  background: var(--primary-purple);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  padding: 25px 0;
+  text-align: center;
+  border-top: 1px solid rgba(138, 43, 226);
+}
+
+.footer-bottom p {
+  color: var(--text-light-gray);
+  font-size: 0.9rem;
+} 

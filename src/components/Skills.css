@@ -1,0 +1,206 @@
+.skills {
+  padding: var(--section-padding);
+  background: linear-gradient(to bottom, var(--background-dark), rgba(7, 1, 23, 0.9));
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.skills-column {
+  flex: 1;
+}
+
+.skills-subtitle {
+  font-size: 1.8rem;
+  color: var(--text-white);
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.skill-item {
+  width: 100%;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.skill-percentage {
+  position: relative;
+  font-weight: 700;
+  color: var(--primary-purple);
+  text-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(138, 43, 226, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(to right, var(--primary-purple), var(--light-purple));
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-progress-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  filter: blur(5px);
+  background: linear-gradient(to right, var(--primary-purple), var(--light-purple));
+  border-radius: 10px;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.skill-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  will-change: transform;
+}
+
+.skill-icon i {
+  font-size: 3rem;
+  color: var(--primary-purple);
+  transition: all 0.3s ease;
+}
+
+.skill-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background: var(--primary-purple);
+  transition: width 0.3s ease;
+}
+
+.skill-icon:hover::after {
+  width: 100%;
+}
+
+.skill-icon span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-gray);
+  transition: color 0.3s ease;
+}
+
+.skill-icon:hover span {
+  color: var(--primary-purple);
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .skills-container {
+    flex-direction: column;
+  }
+}
+
+.custom-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  color: var(--primary-purple);
+  background-color: rgba(138, 43, 226, 0.1);
+  border-radius: 50%;
+  border: 2px solid var(--primary-purple);
+  transition: all 0.3s ease;
+}
+
+.skill-icon:hover .custom-icon {
+  background-color: var(--primary-purple);
+  color: white;
+  transform: scale(1.1);
+}
+
+.unreal-icon {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.unreal-engine-logo {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-image: url('./../assets/unreal.png');
+  background-size: cover; /* ensure image fills the area */
+  background-position: center;
+}
+
+.ue-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1A1A1A;
+  border: 2px solid #2A2A2A;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.ue-letter {
+  position: relative;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  z-index: 2;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.skill-icon:hover .unreal-engine-logo {
+  transform: scale(1.1);
+}

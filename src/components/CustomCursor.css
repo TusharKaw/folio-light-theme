@@ -1,0 +1,59 @@
+.cursor-wrapper {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-wrapper.hidden {
+  opacity: 0;
+}
+
+.custom-cursor {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--primary-purple);
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+.custom-cursor.clicked {
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-purple);
+  border-color: transparent;
+}
+
+.custom-cursor.hovered {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(138, 43, 226, 0.2);
+  border-color: rgba(138, 43, 226, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.cursor-trail {
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-purple);
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.cursor-trail.hovered {
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .cursor-wrapper {
+    display: none;
+  }
+} 

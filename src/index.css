@@ -1,0 +1,59 @@
+:root {
+  --background-dark: #0e0322;
+  --background-darker: #070117;
+  --primary-purple: #8a2be2;
+  --light-purple: #9d4edd;
+  --text-white: #ffffff;
+  --text-gray: #e6e6e6;
+  --text-light-gray: #cccccc;
+  --section-padding: 80px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-white);
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden;
+  cursor: none;
+  transition: background-color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--primary-purple);
+  color: var(--text-white);
+}
+
+a, button, input[type="submit"], .card, .project-card, .service-card, .navbar-toggle, .skill-icon, .project-img {
+  cursor: none !important;
+}
